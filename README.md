@@ -1,6 +1,16 @@
 # Cyberset
-
 Przedstawiamy projekt drużyny Cyberset - komunikator "Chatty!".
+
+## Opis projektu  
+"Chatty!" to aplikacja umożliwiająca szybką i bezpieczną komunikację w czasie rzeczywistym. Projekt łączy nowoczesny design z funkcjonalnością, oferując obsługę czatów tekstowych, połączeń głosowych i wideo, przesyłanie plików oraz zaawansowane funkcje bezpieczeństwa.  
+
+## Funkcje  
+- **Czaty tekstowe**: rozmowy indywidualne i grupowe, wsparcie dla emoji, linków multimedialnych i edycji wiadomości.  
+- **Połączenia głosowe i wideo**: wysokiej jakości transmisje, współdzielenie ekranu.  
+- **Przesyłanie plików**: obsługa różnych formatów i podgląd treści w aplikacji.  
+- **Bezpieczeństwo**: szyfrowanie end-to-end, kontrola prywatności.  
+- **Synchronizacja**: wsparcie dla wielu urządzeń, powiadomienia w czasie rzeczywistym.  
+- **Personalizacja**: motywy kolorystyczne, tryb ciemny.
 
 ### Początki
 Z pomocą poniższych instrukcji będziesz mógł posiąść swoją własną kopię projektu i uruchomić ją na swojej lokalnej maszynie.
@@ -13,4 +23,8 @@ pip install -r requirements.txt
 ```
 
 #### Instalacja
+
+```bash
+git clone https://github.com/2024-2025-AGH-Wstep-do-Informatyki/Cyberset.git 
+
 
