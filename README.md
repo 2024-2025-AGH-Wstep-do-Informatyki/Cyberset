@@ -4,7 +4,7 @@ Przedstawiamy projekt drużyny Cyberset - komunikator "Chatty!".
 ## Opis projektu  
 "Chatty!" to aplikacja umożliwiająca szybką i bezpieczną komunikację w czasie rzeczywistym. Projekt łączy nowoczesny design z funkcjonalnością, oferując obsługę czatów tekstowych, połączeń głosowych i wideo, przesyłanie plików oraz zaawansowane funkcje bezpieczeństwa.  
 
-## Funkcje  
+### Funkcje  
 - **Czaty tekstowe**: rozmowy indywidualne i grupowe, wsparcie dla emoji, linków multimedialnych i edycji wiadomości.  
 - **Połączenia głosowe i wideo**: wysokiej jakości transmisje, współdzielenie ekranu.  
 - **Przesyłanie plików**: obsługa różnych formatów i podgląd treści w aplikacji.  
@@ -26,5 +26,12 @@ pip install -r requirements.txt
 
 ```bash
 git clone https://github.com/2024-2025-AGH-Wstep-do-Informatyki/Cyberset.git 
+```
+
+### Contributors
+- **Piotr Pazdan**
+- **Bartłomiej Ząbek**
+- **Maksymilian Oliwa**
+
 
 
