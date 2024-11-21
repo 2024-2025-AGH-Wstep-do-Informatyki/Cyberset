@@ -11,7 +11,10 @@ Przedstawiamy projekt drużyny Cyberset - komunikator "Chatty!".
 - **Bezpieczeństwo**: szyfrowanie end-to-end, kontrola prywatności.  
 - **Synchronizacja**: wsparcie dla wielu urządzeń, powiadomienia w czasie rzeczywistym.  
 - **Personalizacja**: motywy kolorystyczne, tryb ciemny.
-  
+
+### Tryb offline
+"Chatty!" będzie wspierać tryb offline, który pozwoli użytkownikom na odczyt i edycję wiadomości, nawet bez połączenia z Internetem. Zmiany dokonane w trybie offline zostaną zsynchronizowane z serwerem automatycznie po ponownym połączeniu z siecią.
+
 ### Bezpieczeństwo twoich danych
 Bezpieczeństwo informacji będzie jednym z kluczowych elementów naszej aplikacji. Używamy zaawansowanego szyfrowania, które zapewni poufność przesyłanych danych oraz ochronę przed nieautoryzowanym dostępem. 
 System jest zaprojektowany z uwzględnieniem najlepszych praktyk w zakresie ochrony danych, co pozwala minimalizować ryzyko związane z potencjalnymi zagrożeniami. 
