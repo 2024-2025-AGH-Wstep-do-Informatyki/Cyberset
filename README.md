@@ -11,6 +11,9 @@ Przedstawiamy projekt drużyny Cyberset - komunikator "Chatty!".
 - **Bezpieczeństwo**: szyfrowanie end-to-end, kontrola prywatności.  
 - **Synchronizacja**: wsparcie dla wielu urządzeń, powiadomienia w czasie rzeczywistym.  
 - **Personalizacja**: motywy kolorystyczne, tryb ciemny.
+  
+### Bezpieczeństwo twoich danych
+Bezpieczeństwo informacji będzie jednym z kluczowych elementów naszej aplikacji. Używamy zaawansowanego szyfrowania, które zapewni poufność przesyłanych danych oraz ochronę przed nieautoryzowanym dostępem. System jest zaprojektowany z uwzględnieniem najlepszych praktyk w zakresie ochrony danych, co pozwala minimalizować ryzyko związane z potencjalnymi zagrożeniami. Dodatkowo zamierzamy stale monitorować system pod kątem luk bezpieczeństwa i aktualizować go w odpowiedzi na nowe wyzwania. Wszystkie rozwiązania mają na celu stworzenie środowiska, które zapewni wysoki poziom ochrony i stabilności w zakresie przesyłania informacji.
 
 ### Początki
 Z pomocą poniższych instrukcji będziesz mógł posiąść swoją własną kopię projektu i uruchomić ją na swojej lokalnej maszynie.
