@@ -5,6 +5,6 @@ def verify_token(token):
         payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
         return payload["user_id"]
     except jwt.ExpiredSignatureError:
-        return "Ten token wygasł"
+        return "The token has expired"
     except jwt.InvalidTokenError:
-        return "Ten token jest nieprawidłowy"
+        return "This token is invalid"
