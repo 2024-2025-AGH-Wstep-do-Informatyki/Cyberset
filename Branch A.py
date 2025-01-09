@@ -1,4 +1,4 @@
-SECRET_KEY = "nowy_tajny_klucz"
+SECRET_KEY = "new_secret_key"
 
 def verify_token(token):
     try:
