@@ -3,7 +3,7 @@ import selectors
 
 
 ADDR = '127.0.0.1'
-PORT = 34343
+PORT = 34341
 sel = selectors.DefaultSelector()
 
 
