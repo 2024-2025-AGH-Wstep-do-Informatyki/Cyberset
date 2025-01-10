@@ -4,7 +4,6 @@ import selectors
 
 ADDR = '127.0.0.1'
 PORT = 34343
-sel = selectors.DefaultSelector()
 
 
 def accept(sock):
