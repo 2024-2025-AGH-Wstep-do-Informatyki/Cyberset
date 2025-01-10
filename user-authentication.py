@@ -3,23 +3,33 @@ from datetime import datetime, timedelta
 
 SECRET_KEY = "your_secret_key"
 
-def create_token(user_id, role="user"):  # Dodano nowy parametr 'role'
-    expiration = datetime.utcnow() + timedelta(minutes=30)  # Zmieniono czas ważności
-    token = jwt.encode({"user_id": user_id, "role": role, "exp": expiration}, SECRET_KEY, algorithm="HS256")
-    return token
+def create_token(user_id):  # Usunięto parametr 'role' z poprzedniej wersji
+    expiration = datetime.utcnow() + timedelta(hours=2)  # Zmieniono czas ważności na 2 godziny
+    token = jwt.encode({"user_id": user_id, "exp": expiration}, SECRET_KEY, algorithm="HS256")
+    return {"token": token, "expires_at": expiration.isoformat()}  # Zwracana wartość to teraz słownik
 
 def verify_token(token):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        return {"user_id": payload["user_id"], "role": payload.get("role", "user")}  # Zwraca teraz słownik
-    except jwt.ExpiredSignatureError:
-        return "Token expired"
-    except jwt.InvalidTokenError:
-        return "Invalid token"
 
-def is_token_valid(token):  # Dodano nową funkcję, która może powodować konflikt
+        # Dodano dodatkowe sprawdzanie czasu ważności
+        if datetime.utcnow() > datetime.fromtimestamp(payload["exp"]):
+            return "Token manually expired"
+        return payload
+
+    except jwt.ExpiredSignatureError:
+        raise ValueError("Token expired")  # Zmieniono sposób obsługi błędu
+    except jwt.InvalidTokenError as e:
+        return f"Invalid token: {str(e)}"  # Dodano więcej szczegółów do błędu
+      
+def refresh_token(token):  # Nowa funkcja do odświeżania tokena
     try:
-        jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        return True
+        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"], options={"verify_exp": False})
+        new_expiration = datetime.utcnow() + timedelta(hours=1)
+        payload["exp"] = new_expiration
+        new_token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+        return {"token": new_token, "expires_at": new_expiration.isoformat()}
     except jwt.InvalidTokenError:
-        return False
+
+        return "Cannot refresh invalid token"
+
