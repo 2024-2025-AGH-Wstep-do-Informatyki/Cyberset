@@ -3,7 +3,7 @@ import selectors
 
 
 ADDR = '127.0.0.1'
-PORT = 34343
+PORT = 34344
 
 def main():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -18,7 +18,7 @@ def main():
             print("Connection established to: ", addr)
             while True:
                 try:
-                    data = conn.recv(1024)
+                    data = conn.recv(2048)
                     if not data:
                         break
                     print("Data received from",addr,":\n", data.decode())
